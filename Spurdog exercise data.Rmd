@@ -21,7 +21,7 @@ This file contains **instantaneous mortality rates**, which must be **converted 
 | `natural_mort` | Instantaneous natural mortality rate. |
 | `fishing_mort` | Instantaneous fishing mortality rate. Fishing only occurs between ages **5 and 30**, but you may choose to alter this range. |
 | `total_mort` | Sum of natural and fishing mortality rates. |
-| `survival_prob` | Precomputed survival probability \( S = e^{-(M + F)} \). |
+| `survival_prob` | Pre-calculated survival probability \( S = e^{-(M + F)} \). |
 
 > **❓ Consider:**  
 > - How do you convert **instantaneous mortality rates** into **survival probabilities**?  
@@ -53,13 +53,10 @@ This file provides **fecundity-related parameters** but requires calculations to
    - Will you extend fecundity values, or truncate the dataset to match age classes?
 
 2. **How should fishing mortality be incorporated into the model?**  
-   - Fishing is defined only between ages 5-30. Will you **extend** it if using **all age classes**, or **reduce** the matrix size?
+   - Fishing is defined only between ages 5-30. Will you extend it in other scenarios, if using all age classes?
 
-3. **How do you convert mortality into survival probability?**  
-   - This is **essential** for filling in the **sub-diagonal** of the Leslie matrix.
-
-4. **How should fecundity be computed for the model?**  
-   - What adjustments are needed for **maturity, gestation period, and sex ratio**?
+3. **How should fecundity be computed for the model?**  
+   - What adjustments are needed for maturity, gestation period, and sex ratio?
 
 ---
 ## 📌 Data Provenance  
