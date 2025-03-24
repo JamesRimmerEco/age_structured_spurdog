@@ -2,7 +2,7 @@
 # Spurdog Life Table Generator
 # -------------------------------
 # This script creates a life table for spurdogs by combining mortality and fertility data.
-# It assumes that 'mort_data' is already loaded in your workspace with the following columns:
+# 'mort_data' needs to be loaded into the workspace and has the following columns:
 #   a            : Age index from 1 to 61 (where a=1 corresponds to age 0-1, a=2 to 1-2, etc.)
 #   survival_prob: Probability of surviving from the current age to the next
 #
@@ -30,7 +30,7 @@ mort_data <- read.csv("Mortality_data.csv", stringsAsFactors = FALSE) %>%
 # Convert the age index so that a = 1 becomes age 0, a = 2 becomes age 1, etc.
 mort_data$age <- mort_data$a - 1
 
-# Create the age vector (should be 0 to 60 if there are 61 rows)
+# Create the age vector 
 ages <- mort_data$age
 
 # ---- Build Fertility Data (b_a) ----
