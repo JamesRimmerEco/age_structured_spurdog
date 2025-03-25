@@ -48,7 +48,7 @@ The life table combines these data to create a dataset formatted for constructin
 - **`S_a`**: The survival probability for each age class, taken directly from Mortality_data.csv.
 - **`b_a`**: The adjusted fecundity rate for each age class. This value is calculated from the fecundity parameters (such as proportion mature and pups per mature female) and is further adjusted by dividing by 4 to account for a 2-year gestation period and a 1:1 sex ratio.
 
-In summary, while Mortality_data.csv and Fecundity_by_age_exercise.csv provide raw inputs, spurdog_life_table.csv consolidates these into a single, ready-to-use dataset for Leslie matrix modeling. In the Leslie matrix, the top row (fecundity row) is populated with the **F_a** values, and the sub-diagonal is filled with the **S_a** values. You would still therefore need to calculate **F_a**, adjusting for survival between age classes before pupping (births). |
+This realignment should make it clearer to see that the fecundity rates apply at the start of that age class, and survival probabilities apply through it. In the Leslie matrix, the top row (fecundity row) is populated with the **F_a** values, and the sub-diagonal is filled with the **S_a** values. You would still therefore need to calculate **F_a**, adjusting for survival between age classes before pupping (births). |
 
 ---
 ## 📌 Data Provenance  
